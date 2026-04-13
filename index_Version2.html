@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aldo Fitness Store | Gymshark & Dragon Pharma</title>
+  <meta name="description" content="Ropa Gymshark y suplementos Dragon Pharma. Venta al detalle y al por mayor." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="overlay"></div>
+    <nav class="nav container">
+      <h1 class="logo">ALDO FITNESS STORE</h1>
+      <a class="btn btn-small" href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="hero-content container">
+      <p class="tag">Detalle & Mayor</p>
+      <h2>Ropa deportiva y suplementos en un solo lugar</h2>
+      <p class="subtitle">
+        Trabajamos con productos de referencia en el mundo fitness para ayudarte a entrenar mejor.
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="#catalogo">Ver catálogo</a>
+        <a class="btn btn-outline" id="heroWhatsappBtn" href="#" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="catalogo" class="section container">
+      <h3>Catálogo en Canva</h3>
+      <p>Revisa todos los productos, formatos y detalles en nuestro catálogo oficial.</p>
+
+      <div class="catalog-actions">
+        <a id="canvaLink" class="btn" href="#" target="_blank" rel="noopener">Abrir catálogo</a>
+      </div>
+
+      <div class="embed-wrap">
+        <iframe
+          id="canvaEmbed"
+          src=""
+          title="Catálogo Canva"
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <section id="lineas" class="section alt">
+      <div class="container">
+        <h3>Nuestras líneas</h3>
+        <div class="grid">
+          <article class="card">
+            <h4>Gymshark</h4>
+            <p>Ropa deportiva: leggings, shorts, tops, poleras y accesorios.</p>
+          </article>
+          <article class="card">
+            <h4>Dragon Pharma</h4>
+            <p>Suplementos: proteínas, pre-entrenos, aminoácidos y más.</p>
+          </article>
+          <article class="card">
+            <h4>Ventas Mayoristas</h4>
+            <p>Precios especiales por volumen para revendedores y gimnasios.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="mayoristas" class="section container">
+      <h3>¿Compras al por mayor?</h3>
+      <p>
+        Si tienes tienda, box o gimnasio, te ayudamos con una propuesta personalizada de volumen.
+      </p>
+      <a id="mayoristaBtn" class="btn" href="#" target="_blank" rel="noopener">
+        Solicitar lista mayorista por WhatsApp
+      </a>
+    </section>
+
+    <section id="contacto" class="section container">
+      <h3>Contacto</h3>
+      <div class="contact-grid">
+        <div class="card contact-info">
+          <p><strong>WhatsApp:</strong> <a id="waTextLink" href="#" target="_blank" rel="noopener">+56 9 7129 5966</a></p>
+          <p><strong>Catálogo:</strong> <a id="canvaTextLink" href="#" target="_blank" rel="noopener">Ver en Canva</a></p>
+          <p><strong>Atención:</strong> Lunes a sábado</p>
+        </div>
+
+        <form id="contactForm" class="card form">
+          <label>Nombre
+            <input type="text" name="nombre" required />
+          </label>
+          <label>Email
+            <input type="email" name="email" required />
+          </label>
+          <label>Mensaje
+            <textarea name="mensaje" rows="4" required></textarea>
+          </label>
+          <button type="submit" class="btn">Enviar</button>
+          <p id="formMsg"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="legal">
+      Aviso legal: “Gymshark” y “Dragon Pharma” son marcas registradas de sus respectivos propietarios.
+      Este sitio corresponde a un distribuidor/revendedor independiente (cuando aplique) y no representa
+      necesariamente una relación oficial directa con dichas marcas.
+    </p>
+    <p>© <span id="year"></span> Aldo Fitness Store</p>
+  </footer>
+
+  <!-- Botón flotante WhatsApp -->
+  <a id="whatsappFloat" class="wa-float" href="#" target="_blank" rel="noopener" aria-label="Hablar por WhatsApp">
+    <span>WhatsApp</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
