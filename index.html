@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aldo Fitness Store | Ropa & Suplementos</title>
   <meta name="description" content="Ropa deportiva y suplementos al detalle y por mayor." />
-  <link rel="stylesheet" href="styles.css?v=8" />
+  <link rel="stylesheet" href="styles.css?v=9" />
 </head>
 <body>
   <header class="hero">
@@ -25,11 +25,12 @@
     </div>
   </header>
 
-  <!-- HERO VIDEO (visible, no de fondo) -->
+  <!-- Video principal insertado (sin controles, sin sonido, loop) -->
   <section class="hero-video-section container">
     <div class="hero-video-wrap">
-      <video id="heroMainVideo" class="hero-main-video" autoplay muted loop playsinline preload="auto" controls>
-        <source src="./Clip_principal.mp4" type="video/mp4" />
+      <video id="heroMainVideo" class="hero-main-video"
+        autoplay muted loop playsinline preload="auto" controlslist="nodownload noplaybackrate noremoteplayback" disablepictureinpicture>
+        <source src="./Clip_principal.mp4?v=9" type="video/mp4" />
       </video>
     </div>
   </section>
@@ -62,9 +63,11 @@
           <span class="tag">MAYORISTAS</span>
         </div>
 
+        <!-- Video mayorista insertado (sin controles, sin sonido, loop) -->
         <div class="mayor-video-wrap">
-          <video class="mayor-video" autoplay muted loop playsinline preload="metadata" controls>
-            <source src="./ManosMayor.mp4" type="video/mp4" />
+          <video id="mayorVideo" class="mayor-video"
+            autoplay muted loop playsinline preload="metadata" controlslist="nodownload noplaybackrate noremoteplayback" disablepictureinpicture>
+            <source src="./ManosMayor.mp4?v=9" type="video/mp4" />
           </video>
         </div>
 
@@ -93,14 +96,13 @@
   <footer class="footer">
     <p class="legal">
       Aviso legal: “Gymshark” y “Dragon Pharma” son marcas registradas de sus respectivos propietarios.
-      Este sitio corresponde a un distribuidor/revendedor independiente (cuando aplique) y no representa
-      necesariamente una relación oficial directa con dichas marcas.
+      Este sitio corresponde a un distribuidor/revendedor independiente (cuando aplique).
     </p>
     <p>© <span id="year"></span> Aldo Fitness Store</p>
   </footer>
 
   <a id="whatsappFloat" class="wa-float" href="#" target="_blank" rel="noopener">WhatsApp</a>
 
-  <script src="script.js?v=8"></script>
+  <script src="script.js?v=9"></script>
 </body>
 </html>
