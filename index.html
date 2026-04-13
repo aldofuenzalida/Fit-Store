@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aldo Fitness Store | Ropa & Suplementos</title>
   <meta name="description" content="Ropa deportiva y suplementos al detalle y por mayor." />
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=3" />
 </head>
 <body>
   <header class="hero">
@@ -21,41 +21,58 @@
     <div class="hero-content container">
       <p class="badge">Tienda Fitness</p>
       <h2>Ropa deportiva y suplementos en un solo lugar</h2>
-      <p>Catálogos separados para ropa deportiva y suplementos al por mayor.</p>
-      <div class="hero-actions">
-        <a class="btn" href="#ropa">Ver catálogo de ropa</a>
-        <a class="btn btn-outline" href="#mayor">Ver mayoristas</a>
-      </div>
+      <p>Catálogos integrados en la misma web para una navegación más cómoda.</p>
     </div>
   </header>
 
   <main>
+    <!-- ROPA -->
     <section id="ropa" class="section container">
       <div class="section-head">
         <h3>Ropa Deportiva</h3>
         <span class="tag">CATÁLOGO</span>
       </div>
-      <p>Explora nuestra selección de ropa deportiva.</p>
-      <div class="hero-actions">
-        <a id="catalogoRopaBtn" class="btn" href="https://www.canva.com/design/DAHGvseG0iY/IO6EJQKciq2XtHkYsSUHlg/view" target="_blank" rel="noopener">Abrir catálogo ropa</a>
-        <a id="waRopaBtn" class="btn btn-outline" href="#" target="_blank" rel="noopener">Consultar ropa por WhatsApp</a>
+      <p>Catálogo embebido de ropa deportiva:</p>
+
+      <div class="embed-wrap">
+        <iframe
+          src="https://www.canva.com/design/DAHGvseG0iY/IO6EJQKciq2XtHkYsSUHlg/view?embed"
+          title="Catálogo Ropa"
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="cta-row">
+        <a id="waRopaBtn" class="btn" href="#" target="_blank" rel="noopener">Consultar ropa por WhatsApp</a>
       </div>
     </section>
 
+    <!-- MAYORISTA -->
     <section id="mayor" class="section section-soft">
       <div class="container">
         <div class="section-head">
           <h3>Suplementos al por mayor</h3>
           <span class="tag">MAYORISTAS</span>
         </div>
-        <p>Sección exclusiva para compras mayoristas de suplementos.</p>
-        <div class="hero-actions">
-          <a id="catalogoMayorBtn" class="btn" href="https://www.canva.com/design/DAHGvn9iCrY/TeqpoWdJGAx3euB3KqkXjQ/view" target="_blank" rel="noopener">Abrir catálogo mayorista</a>
-          <a id="waMayorBtn" class="btn btn-outline" href="#" target="_blank" rel="noopener">Consultar mayorista por WhatsApp</a>
+        <p>Catálogo embebido de suplementos mayoristas:</p>
+
+        <div class="embed-wrap">
+          <iframe
+            src="https://www.canva.com/design/DAHGvn9iCrY/TeqpoWdJGAx3euB3KqkXjQ/view?embed"
+            title="Catálogo Mayorista"
+            loading="lazy"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="cta-row">
+          <a id="waMayorBtn" class="btn" href="#" target="_blank" rel="noopener">Consultar mayorista por WhatsApp</a>
         </div>
       </div>
     </section>
 
+    <!-- CONTACTO -->
     <section id="contacto" class="section container">
       <h3>Contacto</h3>
       <p>Si necesitas asesoría, stock o precios, escríbeme directamente:</p>
@@ -66,13 +83,16 @@
   <footer class="footer">
     <p class="legal">
       Aviso legal: “Gymshark” y “Dragon Pharma” son marcas registradas de sus respectivos propietarios.
-      Este sitio corresponde a un distribuidor/revendedor independiente (cuando aplique).
+      Este sitio corresponde a un distribuidor/revendedor independiente (cuando aplique) y no representa
+      necesariamente una relación oficial directa con dichas marcas.
     </p>
     <p>© <span id="year"></span> Aldo Fitness Store</p>
   </footer>
 
-  <a id="whatsappFloat" class="wa-float" href="#" target="_blank" rel="noopener">WhatsApp</a>
+  <a id="whatsappFloat" class="wa-float" href="#" target="_blank" rel="noopener" aria-label="Hablar por WhatsApp">
+    WhatsApp
+  </a>
 
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>
