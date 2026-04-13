@@ -1,172 +1,45 @@
-:root{
-  --bg:#f7f7f5;
-  --surface:#ffffff;
-  --soft:#f0f2f4;
-  --text:#111111;
-  --muted:#555;
-  --line:#e5e7eb;
-  --black:#111;
-  --green:#25D366;
+// ===== CONFIG =====
+const WHATSAPP_NUMBER = "56971295966";
+
+// Mensajes por sección
+const MSG_ROPA = "Hola Aldo, estoy interesado en el catálogo de ropa deportiva. ¿Me puedes dar más información?";
+const MSG_MAYOR = "Hola Aldo, estoy interesado en productos al por mayor (suplementos). ¿Me puedes enviar lista y precios?";
+const MSG_GENERAL = "Hola Aldo, estoy interesado en tus productos, ¿Puedes darme mas informacion?.";
+
+// Catálogos Canva separados
+const LINK_CATALOGO_ROPA = "https://www.canva.com/design/DAHGvseG0iY/IO6EJQKciq2XtHkYsSUHlg/view";
+const LINK_CATALOGO_MAYOR = "https://www.canva.com/design/DAHGvn9iCrY/TeqpoWdJGAx3euB3KqkXjQ/view";
+// ====================
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+function waLink(message) {
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
+// Botones de catálogo
+const ropaBtn = document.getElementById("catalogoRopaBtn");
+const mayorBtn = document.getElementById("catalogoMayorBtn");
 
-body{
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
-}
+if (ropaBtn) ropaBtn.href = LINK_CATALOGO_ROPA;
+if (mayorBtn) mayorBtn.href = LINK_CATALOGO_MAYOR;
 
-.container{width:min(1100px,92%);margin:0 auto}
+// Botones de WhatsApp por sección
+const waRopaBtn = document.getElementById("waRopaBtn");
+const waMayorBtn = document.getElementById("waMayorBtn");
+const waMainBtn = document.getElementById("waMainBtn");
+const waFloat = document.getElementById("whatsappFloat");
 
-/* Header */
-.hero{
-  background:linear-gradient(180deg,#fff 0%,#f6f7f8 100%);
-  border-bottom:1px solid var(--line);
-}
-.nav{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:1rem 0;
-}
-.logo{
-  font-size:1rem;
-  font-weight:800;
-  letter-spacing:.5px;
-}
-.nav-links{
-  display:flex;
-  gap:1rem;
-}
-.nav-links a{
-  text-decoration:none;
-  color:var(--text);
-  font-weight:600;
-}
-.nav-links a:hover{opacity:.7}
+if (waRopaBtn) waRopaBtn.href = waLink(MSG_ROPA);
+if (waMayorBtn) waMayorBtn.href = waLink(MSG_MAYOR);
+if (waMainBtn) waMainBtn.href = waLink(MSG_GENERAL);
+if (waFloat) waFloat.href = waLink(MSG_GENERAL);
 
-.hero-content{
-  padding:4.8rem 0 3.8rem;
-}
-.badge{
-  display:inline-block;
-  background:#111;
-  color:#fff;
-  padding:.35rem .65rem;
-  border-radius:999px;
-  font-size:.8rem;
-  margin-bottom:1rem;
-}
-.hero h2{
-  font-size:clamp(2rem,4.5vw,3.4rem);
-  line-height:1.08;
-  margin-bottom:.9rem;
-  max-width:18ch;
-}
-.hero p{
-  color:var(--muted);
-  max-width:720px;
-}
-
-/* Sections */
-.section{
-  padding:3.2rem 0;
-}
-.section-soft{
-  background:var(--soft);
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-}
-.section-head{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:1rem;
-  margin-bottom:.45rem;
-}
-.section h3{
-  font-size:1.7rem;
-}
-.tag{
-  font-size:.8rem;
-  font-weight:700;
-  border:1px solid var(--line);
-  padding:.25rem .6rem;
-  border-radius:999px;
-  background:#fff;
-  white-space:nowrap;
-}
-
-/* Buttons */
-.hero-actions{
-  margin-top:1.2rem;
-  display:flex;
-  gap:.7rem;
-  flex-wrap:wrap;
-}
-.btn{
-  display:inline-block;
-  margin-top:.2rem;
-  background:var(--black);
-  color:#fff;
-  text-decoration:none;
-  border:1px solid var(--black);
-  padding:.78rem 1.05rem;
-  border-radius:10px;
-  font-weight:700;
-  transition:.2s ease;
-}
-.btn:hover{
-  background:#2b2b2b;
-}
-.btn-outline{
-  background:transparent;
-  color:#111;
-}
-.btn-outline:hover{
-  background:#eceff3;
-  color:#111;
-}
-
-/* Footer */
-.footer{
-  border-top:1px solid var(--line);
-  text-align:center;
-  padding:1.2rem .8rem 2rem;
-  color:var(--muted);
-  background:#fff;
-}
-.legal{
-  max-width:900px;
-  margin:0 auto .7rem;
-  font-size:.9rem;
-}
-
-/* Floating WhatsApp */
-.wa-float{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  z-index:50;
-  background:var(--green);
-  color:#073b1b;
-  text-decoration:none;
-  font-weight:800;
-  padding:.85rem 1rem;
-  border-radius:999px;
-  border:1px solid #1faa52;
-  box-shadow:0 8px 24px rgba(0,0,0,.18);
-}
-.wa-float:hover{filter:brightness(1.05)}
-
-/* Responsive */
-@media (max-width:860px){
-  .nav{
-    flex-direction:column;
-    align-items:flex-start;
-    gap:.65rem;
+// Seguridad/UX en enlaces externos
+["catalogoRopaBtn","catalogoMayorBtn","waRopaBtn","waMayorBtn","waMainBtn","whatsappFloat"].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) {
+    el.target = "_blank";
+    el.rel = "noopener";
   }
-  .hero-content{
-    padding:3.8rem 0 3rem;
-  }
-}
+});
