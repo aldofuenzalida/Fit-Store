@@ -20,7 +20,7 @@ if (waMayorBtn) waMayorBtn.href = waLink(MSG_MAYOR);
 if (waMainBtn) waMainBtn.href = waLink(MSG_GENERAL);
 if (waFloat) waFloat.href = waLink(MSG_GENERAL);
 
-// Forzar videos sin audio, sin controles y autoplay
+// Forzar autoplay silencioso y evitar controles
 ["heroMainVideo","mayorVideo"].forEach(id => {
   const v = document.getElementById(id);
   if (!v) return;
