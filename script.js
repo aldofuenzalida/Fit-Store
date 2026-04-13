@@ -20,7 +20,6 @@ if (waMayorBtn) waMayorBtn.href = waLink(MSG_MAYOR);
 if (waMainBtn) waMainBtn.href = waLink(MSG_GENERAL);
 if (waFloat) waFloat.href = waLink(MSG_GENERAL);
 
-// Forzar autoplay silencioso y evitar controles
 ["heroMainVideo","mayorVideo"].forEach(id => {
   const v = document.getElementById(id);
   if (!v) return;
@@ -28,9 +27,6 @@ if (waFloat) waFloat.href = waLink(MSG_GENERAL);
   v.defaultMuted = true;
   v.volume = 0;
   v.removeAttribute("controls");
-  v.setAttribute("autoplay", "");
-  v.setAttribute("loop", "");
-  v.setAttribute("playsinline", "");
   const p = v.play();
   if (p && typeof p.then === "function") p.catch(() => {});
 });
