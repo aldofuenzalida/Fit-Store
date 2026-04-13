@@ -31,16 +31,46 @@ body{
 .nav{
   display:flex;justify-content:space-between;align-items:center;padding:1rem 0;
 }
-.logo{font-size:1rem;font-weight:800;letter-spacing:.5px}
+
+/* Logo tipográfico */
+.logo{
+  display:flex;
+  flex-direction:column;
+  line-height:1;
+}
+.logo-main{
+  font-size:1.15rem;
+  font-weight:900;
+  letter-spacing:1.2px;
+}
+.logo-sub{
+  font-size:.68rem;
+  font-weight:700;
+  letter-spacing:2px;
+  opacity:.9;
+  margin-top:.2rem;
+}
+
 .nav-links{display:flex;gap:1rem}
 .nav-links a{color:#fff;text-decoration:none;font-weight:600}
+
 .hero-content{padding:5rem 0 4rem}
 .badge{
   display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.34);
   color:#fff;padding:.35rem .65rem;border-radius:999px;font-size:.8rem;margin-bottom:1rem;
 }
-.hero h2{font-size:clamp(2rem,4.6vw,3.5rem);line-height:1.06;margin-bottom:.9rem;max-width:16ch}
-.hero p{color:#f3f4f6;max-width:740px;font-size:1.1rem}
+.hero h2{
+  font-size:clamp(2rem,4.6vw,3.5rem);
+  line-height:1.06;
+  margin-bottom:.7rem;
+  max-width:16ch;
+}
+.slogan{
+  font-size:1.15rem;
+  font-weight:700;
+  margin-bottom:.35rem;
+}
+.hero p{color:#f3f4f6;max-width:740px;font-size:1.05rem}
 
 /* VIDEOS */
 .hero-video-section{margin-top:1rem}
