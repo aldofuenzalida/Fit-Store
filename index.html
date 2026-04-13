@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aldo Fitness Store | Ropa & Suplementos</title>
   <meta name="description" content="Ropa deportiva y suplementos al detalle y por mayor." />
-  <link rel="stylesheet" href="styles.css?v=6" />
+  <link rel="stylesheet" href="styles.css?v=7" />
 </head>
 <body>
-  <header class="hero">
-    <!-- Video de fondo principal (archivo en raíz del repo) -->
-    <video class="hero-video" autoplay muted loop playsinline preload="auto">
+  <header class="hero hero-bg-fallback">
+    <!-- Video de fondo principal -->
+    <video id="heroVideo" class="hero-video" autoplay muted loop playsinline preload="auto">
       <source src="./Clip_principal.mp4" type="video/mp4" />
     </video>
     <div class="hero-overlay"></div>
@@ -32,7 +32,6 @@
   </header>
 
   <main>
-    <!-- ROPA -->
     <section id="ropa" class="section container">
       <div class="section-head">
         <h3>Ropa Deportiva</h3>
@@ -53,7 +52,6 @@
       </div>
     </section>
 
-    <!-- MAYORISTA -->
     <section id="mayor" class="section section-soft">
       <div class="container">
         <div class="section-head">
@@ -61,7 +59,6 @@
           <span class="tag">MAYORISTAS</span>
         </div>
 
-        <!-- Video sobre el catálogo mayorista (archivo en raíz del repo) -->
         <div class="mayor-video-wrap">
           <video class="mayor-video" autoplay muted loop playsinline preload="metadata">
             <source src="./ManosMayor.mp4" type="video/mp4" />
@@ -103,6 +100,6 @@
     WhatsApp
   </a>
 
-  <script src="script.js?v=6"></script>
+  <script src="script.js?v=7"></script>
 </body>
 </html>
