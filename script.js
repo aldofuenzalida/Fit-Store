@@ -1,8 +1,8 @@
 const WHATSAPP_NUMBER = "56971295966";
 
-const MSG_ROPA = "Hola Aldo, estoy interesado en el catálogo de ropa deportiva. ¿Me puedes dar más información?";
-const MSG_MAYOR = "Hola Aldo, estoy interesado en productos al por mayor (suplementos). ¿Me puedes enviar lista y precios?";
-const MSG_GENERAL = "Hola Aldo, estoy interesado en tus productos, ¿Puedes darme mas informacion?.";
+const MSG_ROPA = "Hola AF Labs, estoy interesado en el catálogo de ropa deportiva. ¿Me pueden dar más información?";
+const MSG_MAYOR = "Hola AF Labs, estoy interesado en productos al por mayor (suplementos). ¿Me pueden enviar lista y precios?";
+const MSG_GENERAL = "Hola AF Labs, estoy interesado en sus productos. ¿Me pueden dar más información?";
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
