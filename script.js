@@ -6,7 +6,7 @@ const MSG_GENERAL = "Hola Aldo, estoy interesado en tus productos, ¿Puedes darm
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
-function waLink(message) {
+function waLink(message){
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
@@ -19,11 +19,3 @@ if (waRopaBtn) waRopaBtn.href = waLink(MSG_ROPA);
 if (waMayorBtn) waMayorBtn.href = waLink(MSG_MAYOR);
 if (waMainBtn) waMainBtn.href = waLink(MSG_GENERAL);
 if (waFloat) waFloat.href = waLink(MSG_GENERAL);
-
-["waRopaBtn","waMayorBtn","waMainBtn","whatsappFloat"].forEach(id => {
-  const el = document.getElementById(id);
-  if (el) {
-    el.target = "_blank";
-    el.rel = "noopener";
-  }
-});
