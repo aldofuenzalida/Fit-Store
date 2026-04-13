@@ -16,11 +16,17 @@ body{
 }
 .container{width:min(1100px,92%);margin:0 auto}
 
-/* HERO TEXTO */
+/* HERO con imagen de fondo */
 .hero{
-  background:linear-gradient(180deg,#1f2937 0%, #374151 100%);
+  position:relative;
   color:#fff;
   border-bottom:1px solid #3f4857;
+  background-image:
+    linear-gradient(to bottom, rgba(7,12,20,.62), rgba(7,12,20,.62)),
+    url("./hero-gym.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
 }
 .nav{
   display:flex;justify-content:space-between;align-items:center;padding:1rem 0;
@@ -28,7 +34,7 @@ body{
 .logo{font-size:1rem;font-weight:800;letter-spacing:.5px}
 .nav-links{display:flex;gap:1rem}
 .nav-links a{color:#fff;text-decoration:none;font-weight:600}
-.hero-content{padding:4.2rem 0 2.8rem}
+.hero-content{padding:5rem 0 4rem}
 .badge{
   display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.34);
   color:#fff;padding:.35rem .65rem;border-radius:999px;font-size:.8rem;margin-bottom:1rem;
@@ -59,14 +65,14 @@ body{
   pointer-events:none;
 }
 
-/* Ocultar controles visuales */
+/* Ocultar controles */
 video::-webkit-media-controls,
 video::-webkit-media-controls-enclosure,
 video::-webkit-media-controls-panel{
   display:none !important;
 }
 
-/* Sections */
+/* Secciones */
 .section{padding:3.2rem 0}
 .section-soft{
   background:var(--soft);
@@ -111,7 +117,7 @@ video::-webkit-media-controls-panel{
 }
 .legal{max-width:900px;margin:0 auto .7rem;font-size:.9rem}
 
-/* WhatsApp flotante */
+/* WhatsApp */
 .wa-float{
   position:fixed;right:18px;bottom:18px;z-index:50;
   background:var(--green);color:#073b1b;text-decoration:none;font-weight:800;
@@ -121,7 +127,7 @@ video::-webkit-media-controls-panel{
 
 @media (max-width:860px){
   .nav{flex-direction:column;align-items:flex-start;gap:.65rem}
-  .hero-content{padding:3.5rem 0 2.2rem}
+  .hero-content{padding:4rem 0 3rem}
   .hero p{font-size:1rem}
   .hero-main-video{height:280px}
   .mayor-video{height:220px}
