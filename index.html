@@ -3,104 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aldo Fitness Store | Gymshark & Dragon Pharma</title>
-  <meta name="description" content="Ropa Gymshark y suplementos Dragon Pharma. Venta al detalle y al por mayor." />
+  <title>Aldo Fitness Store | Ropa & Suplementos</title>
+  <meta name="description" content="Ropa deportiva y suplementos al detalle y por mayor." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="hero">
-    <div class="overlay"></div>
     <nav class="nav container">
       <h1 class="logo">ALDO FITNESS STORE</h1>
-      <a class="btn btn-small" href="#contacto">Contacto</a>
+      <div class="nav-links">
+        <a href="#ropa">Ropa</a>
+        <a href="#mayor">Mayoristas</a>
+        <a href="#contacto">Contacto</a>
+      </div>
     </nav>
 
     <div class="hero-content container">
-      <p class="tag">Detalle & Mayor</p>
+      <p class="badge">Tienda Fitness</p>
       <h2>Ropa deportiva y suplementos en un solo lugar</h2>
-      <p class="subtitle">
-        Trabajamos con productos de referencia en el mundo fitness para ayudarte a entrenar mejor.
-      </p>
+      <p>Catálogos separados para ropa deportiva y suplementos al por mayor.</p>
       <div class="hero-actions">
-        <a class="btn" href="#catalogo">Ver catálogo</a>
-        <a class="btn btn-outline" id="heroWhatsappBtn" href="#" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn" href="#ropa">Ver catálogo de ropa</a>
+        <a class="btn btn-outline" href="#mayor">Ver mayoristas</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section id="catalogo" class="section container">
-      <h3>Catálogo en Canva</h3>
-      <p>Revisa todos los productos, formatos y detalles en nuestro catálogo oficial.</p>
-
-      <div class="catalog-actions">
-        <a id="canvaLink" class="btn" href="#" target="_blank" rel="noopener">Abrir catálogo</a>
+    <!-- ROPA -->
+    <section id="ropa" class="section container">
+      <div class="section-head">
+        <h3>Ropa Deportiva</h3>
+        <span class="tag">CATÁLOGO</span>
       </div>
+      <p>Explora nuestra selección de ropa deportiva.</p>
 
-      <div class="embed-wrap">
-        <iframe
-          id="canvaEmbed"
-          src=""
-          title="Catálogo Canva"
-          loading="lazy"
-          allowfullscreen>
-        </iframe>
+      <div class="hero-actions">
+        <a id="catalogoRopaBtn" class="btn" href="#" target="_blank" rel="noopener">
+          Abrir catálogo ropa
+        </a>
+        <a id="waRopaBtn" class="btn btn-outline" href="#" target="_blank" rel="noopener">
+          Consultar ropa por WhatsApp
+        </a>
       </div>
     </section>
 
-    <section id="lineas" class="section alt">
+    <!-- MAYORISTAS -->
+    <section id="mayor" class="section section-soft">
       <div class="container">
-        <h3>Nuestras líneas</h3>
-        <div class="grid">
-          <article class="card">
-            <h4>Gymshark</h4>
-            <p>Ropa deportiva: leggings, shorts, tops, poleras y accesorios.</p>
-          </article>
-          <article class="card">
-            <h4>Dragon Pharma</h4>
-            <p>Suplementos: proteínas, pre-entrenos, aminoácidos y más.</p>
-          </article>
-          <article class="card">
-            <h4>Ventas Mayoristas</h4>
-            <p>Precios especiales por volumen para revendedores y gimnasios.</p>
-          </article>
+        <div class="section-head">
+          <h3>Suplementos al por mayor</h3>
+          <span class="tag">MAYORISTAS</span>
+        </div>
+        <p>Sección exclusiva para compras mayoristas de suplementos.</p>
+
+        <div class="hero-actions">
+          <a id="catalogoMayorBtn" class="btn" href="#" target="_blank" rel="noopener">
+            Abrir catálogo mayorista
+          </a>
+          <a id="waMayorBtn" class="btn btn-outline" href="#" target="_blank" rel="noopener">
+            Consultar mayorista por WhatsApp
+          </a>
         </div>
       </div>
     </section>
 
-    <section id="mayoristas" class="section container">
-      <h3>¿Compras al por mayor?</h3>
-      <p>
-        Si tienes tienda, box o gimnasio, te ayudamos con una propuesta personalizada de volumen.
-      </p>
-      <a id="mayoristaBtn" class="btn" href="#" target="_blank" rel="noopener">
-        Solicitar lista mayorista por WhatsApp
-      </a>
-    </section>
-
+    <!-- CONTACTO -->
     <section id="contacto" class="section container">
       <h3>Contacto</h3>
-      <div class="contact-grid">
-        <div class="card contact-info">
-          <p><strong>WhatsApp:</strong> <a id="waTextLink" href="#" target="_blank" rel="noopener">+56 9 7129 5966</a></p>
-          <p><strong>Catálogo:</strong> <a id="canvaTextLink" href="#" target="_blank" rel="noopener">Ver en Canva</a></p>
-          <p><strong>Atención:</strong> Lunes a sábado</p>
-        </div>
-
-        <form id="contactForm" class="card form">
-          <label>Nombre
-            <input type="text" name="nombre" required />
-          </label>
-          <label>Email
-            <input type="email" name="email" required />
-          </label>
-          <label>Mensaje
-            <textarea name="mensaje" rows="4" required></textarea>
-          </label>
-          <button type="submit" class="btn">Enviar</button>
-          <p id="formMsg"></p>
-        </form>
-      </div>
+      <p>Si necesitas asesoría, stock o precios, escríbeme directamente:</p>
+      <a id="waMainBtn" class="btn" href="#" target="_blank" rel="noopener">WhatsApp</a>
     </section>
   </main>
 
@@ -113,9 +85,9 @@
     <p>© <span id="year"></span> Aldo Fitness Store</p>
   </footer>
 
-  <!-- Botón flotante WhatsApp -->
+  <!-- Botón flotante -->
   <a id="whatsappFloat" class="wa-float" href="#" target="_blank" rel="noopener" aria-label="Hablar por WhatsApp">
-    <span>WhatsApp</span>
+    WhatsApp
   </a>
 
   <script src="script.js"></script>
