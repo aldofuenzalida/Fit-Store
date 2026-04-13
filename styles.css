@@ -194,3 +194,79 @@ body{
   .contact-grid{grid-template-columns:1fr}
   .embed-wrap iframe{height:460px}
 }
+:root{
+  --bg:#f7f7f5;
+  --surface:#ffffff;
+  --soft:#f0f2f4;
+  --text:#111111;
+  --muted:#555;
+  --line:#e5e7eb;
+  --black:#111;
+  --green:#25D366;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family: Inter, system-ui, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+.container{width:min(1100px,92%);margin:0 auto}
+
+.hero{
+  background:linear-gradient(180deg,#fff 0%,#f6f7f8 100%);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:1rem 0;
+}
+.logo{font-size:1rem;font-weight:800;letter-spacing:.5px}
+.nav-links{display:flex;gap:1rem}
+.nav-links a{text-decoration:none;color:var(--text);font-weight:600}
+.nav-links a:hover{opacity:.7}
+
+.hero-content{padding:4.5rem 0 3.5rem}
+.badge{
+  display:inline-block;background:#111;color:#fff;
+  padding:.3rem .6rem;border-radius:999px;font-size:.8rem;margin-bottom:1rem
+}
+.hero h2{font-size:clamp(2rem,4.5vw,3.4rem);line-height:1.08;margin-bottom:.8rem}
+.hero p{color:var(--muted);max-width:700px}
+.hero-actions{margin-top:1.2rem;display:flex;gap:.7rem;flex-wrap:wrap}
+
+.section{padding:3rem 0}
+.section-soft{background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.section-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:.4rem}
+.tag{font-size:.8rem;font-weight:700;border:1px solid var(--line);padding:.25rem .6rem;border-radius:999px;background:#fff}
+
+.btn{
+  display:inline-block;
+  margin-top:1rem;
+  background:var(--black);
+  color:#fff;
+  text-decoration:none;
+  border:1px solid var(--black);
+  padding:.75rem 1rem;
+  border-radius:10px;
+  font-weight:700;
+}
+.btn:hover{background:#2b2b2b}
+.btn-outline{background:transparent;color:#111}
+
+.footer{
+  border-top:1px solid var(--line);
+  text-align:center;
+  padding:1.2rem .8rem 2rem;
+  color:var(--muted);
+}
+.legal{max-width:900px;margin:0 auto .7rem;font-size:.9rem}
+
+/* WhatsApp flotante */
+.wa-float{
+  position:fixed;right:18px;bottom:18px;z-index:50;
+  background:var(--green);color:#073b1b;text-decoration:none;font-weight:800;
+  padding:.85rem 1rem;border-radius:999px;border:1px solid #1faa52;
+  box-shadow:0 8px 24px rgba(0,0,0,.18);
+}
