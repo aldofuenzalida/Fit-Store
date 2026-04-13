@@ -14,47 +14,41 @@ body{
 }
 .container{width:min(1100px,92%);margin:0 auto}
 
-/* HERO */
+/* HERO TEXT */
 .hero{
-  position:relative;
-  min-height:74vh;
-  overflow:hidden;
+  background:linear-gradient(180deg,#1f2937 0%, #374151 100%);
   color:#fff;
-  border-bottom:1px solid var(--line);
+  border-bottom:1px solid #3f4857;
 }
-.hero-bg-fallback{
-  background:#1f2937;
-}
-.hero-video{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  z-index:0;
-}
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(to bottom,rgba(0,0,0,.40),rgba(0,0,0,.58));
-  z-index:1;
-}
-.nav,.hero-content{position:relative;z-index:2}
 .nav{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:1rem 0;
+  display:flex;justify-content:space-between;align-items:center;padding:1rem 0;
 }
 .logo{font-size:1rem;font-weight:800;letter-spacing:.5px}
 .nav-links{display:flex;gap:1rem}
 .nav-links a{color:#fff;text-decoration:none;font-weight:600}
-.nav-links a:hover{opacity:.85}
-.hero-content{padding:5.5rem 0 4rem}
+.hero-content{padding:4.2rem 0 2.8rem}
 .badge{
   display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.34);
   color:#fff;padding:.35rem .65rem;border-radius:999px;font-size:.8rem;margin-bottom:1rem;
 }
 .hero h2{font-size:clamp(2rem,4.6vw,3.5rem);line-height:1.06;margin-bottom:.9rem;max-width:16ch}
 .hero p{color:#f3f4f6;max-width:740px;font-size:1.1rem}
+
+/* TOP VIDEO */
+.hero-video-section{margin-top:1rem}
+.hero-video-wrap{
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+  background:#000;
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+.hero-main-video{
+  width:100%;
+  height:min(70vh,620px);
+  object-fit:cover;
+  display:block;
+}
 
 /* Sections */
 .section{padding:3.2rem 0}
@@ -98,8 +92,7 @@ body{
 
 @media (max-width:860px){
   .nav{flex-direction:column;align-items:flex-start;gap:.65rem}
-  .hero{min-height:64vh}
-  .hero-content{padding:4.2rem 0 3rem}
+  .hero-content{padding:3.5rem 0 2.2rem}
   .hero p{font-size:1rem}
   .embed-wrap iframe{height:520px}
   .mayor-video{height:240px}
