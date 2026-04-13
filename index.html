@@ -5,16 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aldo Fitness Store | Ropa & Suplementos</title>
   <meta name="description" content="Ropa deportiva y suplementos al detalle y por mayor." />
-  <link rel="stylesheet" href="styles.css?v=7" />
+  <link rel="stylesheet" href="styles.css?v=8" />
 </head>
 <body>
-  <header class="hero hero-bg-fallback">
-    <!-- Video de fondo principal -->
-    <video id="heroVideo" class="hero-video" autoplay muted loop playsinline preload="auto">
-      <source src="./Clip_principal.mp4" type="video/mp4" />
-    </video>
-    <div class="hero-overlay"></div>
-
+  <header class="hero">
     <nav class="nav container">
       <h1 class="logo">ALDO FITNESS STORE</h1>
       <div class="nav-links">
@@ -30,6 +24,15 @@
       <p>Catálogos integrados en la misma web para una navegación más cómoda.</p>
     </div>
   </header>
+
+  <!-- HERO VIDEO (visible, no de fondo) -->
+  <section class="hero-video-section container">
+    <div class="hero-video-wrap">
+      <video id="heroMainVideo" class="hero-main-video" autoplay muted loop playsinline preload="auto" controls>
+        <source src="./Clip_principal.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </section>
 
   <main>
     <section id="ropa" class="section container">
@@ -60,7 +63,7 @@
         </div>
 
         <div class="mayor-video-wrap">
-          <video class="mayor-video" autoplay muted loop playsinline preload="metadata">
+          <video class="mayor-video" autoplay muted loop playsinline preload="metadata" controls>
             <source src="./ManosMayor.mp4" type="video/mp4" />
           </video>
         </div>
@@ -96,10 +99,8 @@
     <p>© <span id="year"></span> Aldo Fitness Store</p>
   </footer>
 
-  <a id="whatsappFloat" class="wa-float" href="#" target="_blank" rel="noopener" aria-label="Hablar por WhatsApp">
-    WhatsApp
-  </a>
+  <a id="whatsappFloat" class="wa-float" href="#" target="_blank" rel="noopener">WhatsApp</a>
 
-  <script src="script.js?v=7"></script>
+  <script src="script.js?v=8"></script>
 </body>
 </html>
