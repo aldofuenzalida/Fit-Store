@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aldo Fitness Store | Ropa & Suplementos</title>
   <meta name="description" content="Ropa deportiva y suplementos al detalle y por mayor." />
-  <link rel="stylesheet" href="styles.css?v=10" />
+  <link rel="stylesheet" href="styles.css?v=11" />
 </head>
 <body>
   <header class="hero">
@@ -26,16 +26,24 @@
   </header>
 
   <!-- Video principal insertado -->
-  <section class="hero-video-section container">
+  <section class="hero-video-section container" aria-hidden="true">
     <div class="hero-video-wrap">
-      <video id="heroMainVideo" class="hero-main-video" autoplay muted loop playsinline preload="auto">
-        <source src="./Clip_principal.mp4?v=10" type="video/mp4" />
+      <video
+        id="heroMainVideo"
+        class="hero-main-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        disablepictureinpicture
+        controlslist="nodownload noplaybackrate noremoteplayback nofullscreen">
+        <source src="./Clip_principal.mp4?v=11" type="video/mp4" />
       </video>
     </div>
   </section>
 
   <main>
-    <!-- ROPA -->
     <section id="ropa" class="section container">
       <div class="section-head">
         <h3>Ropa Deportiva</h3>
@@ -56,7 +64,6 @@
       </div>
     </section>
 
-    <!-- MAYORISTA -->
     <section id="mayor" class="section section-soft">
       <div class="container">
         <div class="section-head">
@@ -64,9 +71,18 @@
           <span class="tag">MAYORISTAS</span>
         </div>
 
-        <div class="mayor-video-wrap">
-          <video id="mayorVideo" class="mayor-video" autoplay muted loop playsinline preload="metadata">
-            <source src="./ManosMayor.mp4?v=10" type="video/mp4" />
+        <div class="mayor-video-wrap" aria-hidden="true">
+          <video
+            id="mayorVideo"
+            class="mayor-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            disablepictureinpicture
+            controlslist="nodownload noplaybackrate noremoteplayback nofullscreen">
+            <source src="./ManosMayor.mp4?v=11" type="video/mp4" />
           </video>
         </div>
 
@@ -85,7 +101,6 @@
       </div>
     </section>
 
-    <!-- CONTACTO -->
     <section id="contacto" class="section container">
       <h3>Contacto</h3>
       <p>Si necesitas asesoría, stock o precios, escríbeme directamente:</p>
@@ -103,6 +118,6 @@
 
   <a id="whatsappFloat" class="wa-float" href="#" target="_blank" rel="noopener">WhatsApp</a>
 
-  <script src="script.js?v=10"></script>
+  <script src="script.js?v=11"></script>
 </body>
 </html>
