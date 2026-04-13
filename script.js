@@ -19,11 +19,3 @@ if (waRopaBtn) waRopaBtn.href = waLink(MSG_ROPA);
 if (waMayorBtn) waMayorBtn.href = waLink(MSG_MAYOR);
 if (waMainBtn) waMainBtn.href = waLink(MSG_GENERAL);
 if (waFloat) waFloat.href = waLink(MSG_GENERAL);
-
-// fallback: si el video falla, se oculta y queda fondo oscuro elegante
-const heroVideo = document.getElementById("heroVideo");
-if (heroVideo) {
-  heroVideo.addEventListener("error", () => {
-    heroVideo.style.display = "none";
-  });
-}
