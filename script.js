@@ -4,7 +4,7 @@
 
 const WHATSAPP_NUMBER = "56971295966";
 
-// Supabase (frontend: SOLO public/anon key)
+// Supabase (frontend: SOLO publishable key)
 const SUPABASE_URL = "https://mrwrotpewtpcuqxvzgoo.supabase.co";
 const SUPABASE_ANON_KEY = "sb_publishable_ZeuaFzTNkdvCofSvr7vAWg_jlcBd4DL";
 
@@ -14,7 +14,7 @@ let allProducts = [];
 let currentCategory = "todos";
 const cart = JSON.parse(localStorage.getItem("cart_aflabs") || "[]");
 
-/* ---------- helpers ---------- */
+/* helpers */
 function clp(n) {
   return new Intl.NumberFormat("es-CL").format(Number(n || 0));
 }
@@ -25,7 +25,7 @@ function saveCart(){
   localStorage.setItem("cart_aflabs", JSON.stringify(cart));
 }
 
-/* ---------- init base UI ---------- */
+/* init UI */
 (function initBaseUI(){
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -47,7 +47,7 @@ function saveCart(){
   });
 })();
 
-/* ---------- cart ---------- */
+/* carrito */
 function addToCart(product){
   const found = cart.find(i => i.id === product.id);
   if (found) found.qty += 1;
@@ -140,7 +140,7 @@ function checkoutWhatsApp(){
   window.open(waLink(msg), "_blank");
 }
 
-/* ---------- products ---------- */
+/* productos */
 function renderProducts(products){
   const grid = document.getElementById("productsGrid");
   if (!grid) return;
@@ -152,12 +152,11 @@ function renderProducts(products){
 
   grid.innerHTML = products.map(p => `
     <article class="product-card">
-      <img src="${p.image_url || 'https://picsum.photos/seed/default/600/600'}" alt="${p.name}" />
+      <img src="${p.image_url || ''}" alt="${p.name}" onerror="this.src='https://via.placeholder.com/600x600?text=AF+Labs';" />
       <h4>${p.name}</h4>
       <p>${p.description || ""}</p>
       <div class="product-meta">
         <strong>$${clp(p.price_clp)} CLP</strong>
-        <span>Stock: ${p.stock ?? 0}</span>
       </div>
       <button class="btn" onclick='addToCart(${JSON.stringify(p)})'>Agregar al carrito</button>
     </article>
@@ -182,8 +181,7 @@ async function loadProducts(){
   if (!grid) return;
 
   try {
-    const endpoint =
-      `${SUPABASE_URL}/rest/v1/products?select=id,name,description,price_clp,image_url,category,stock&active=eq.true&order=id.asc`;
+    const endpoint = `${SUPABASE_URL}/rest/v1/products?select=id,name,description,price_clp,image_url,category,active&active=eq.true&order=id.asc`;
 
     const res = await fetch(endpoint, {
       headers: {
@@ -192,9 +190,7 @@ async function loadProducts(){
       }
     });
 
-    if (!res.ok){
-      throw new Error(`HTTP ${res.status}`);
-    }
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
     const products = await res.json();
     allProducts = Array.isArray(products) ? products : [];
@@ -205,13 +201,13 @@ async function loadProducts(){
   }
 }
 
-/* ---------- expose for HTML onclick ---------- */
+/* global para botones HTML */
 window.addToCart = addToCart;
 window.removeFromCart = removeFromCart;
 window.changeQty = changeQty;
 window.checkoutWhatsApp = checkoutWhatsApp;
 window.applyFilter = applyFilter;
 
-/* ---------- start ---------- */
+/* start */
 loadProducts();
 renderCart();
